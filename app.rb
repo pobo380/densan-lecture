@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 
-get '/' do
-    'Hello, world!'
+get '/slides/:file' do |file|
+    content_type :html
+    send_file "slides/#{file}.html"
 end
