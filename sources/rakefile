@@ -1,0 +1,11 @@
+task :default => :generate_slides
+
+srcs  = FileList["*.md"]
+htmls = srcs.ext('html')
+
+task :generate_slides => htmls do |t|
+end
+
+rule '.html' => '.md' do |t|
+  sh "landslide #{t.source} -t tango -d ../slides/#{t.name} -l no -i"
+end
