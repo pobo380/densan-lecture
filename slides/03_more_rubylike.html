@@ -1282,7 +1282,7 @@ div.highlight pre {
             </aside>
             
             <aside class="page_number">
-              1/22
+              1/32
             </aside>
           </footer>
         </div>
@@ -1315,7 +1315,7 @@ div.highlight pre {
             </aside>
             
             <aside class="page_number">
-              2/22
+              2/32
             </aside>
           </footer>
         </div>
@@ -1343,7 +1343,7 @@ div.highlight pre {
             </aside>
             
             <aside class="page_number">
-              3/22
+              3/32
             </aside>
           </footer>
         </div>
@@ -1394,7 +1394,7 @@ div.highlight pre {
             </aside>
             
             <aside class="page_number">
-              4/22
+              4/32
             </aside>
           </footer>
         </div>
@@ -1411,7 +1411,7 @@ div.highlight pre {
             <section><h2>Description</h2>
 <p>変数のスコープとは、宣言した変数が参照可能であるプログラム上の範囲のことです。
 Rubyでは、制御構文(if, for, while, etc..)内で宣言した変数をその外から参照することができます。
-また、関数定義の中では外で定義された変数を参照することはできません。</p>
+また、メソッド定義の中では外で定義された変数を参照することはできません。</p>
 <h2>Example</h2>
 <div class="highlight"><pre><span class="n">str</span> <span class="o">=</span> <span class="s1">&#39;bye&#39;</span>
 
@@ -1430,7 +1430,7 @@ Rubyでは、制御構文(if, for, while, etc..)内で宣言した変数をそ�
 
 <h2>Tips</h2>
 <ul>
-<li>上記の特徴は、制御構文では「新しいスコープが導入されず」、関数定義では「新しいスコープが導入される」と表現されます。</li>
+<li>上記の特徴は、制御構文では「新しいスコープが導入されず」、メソッド定義では「新しいスコープが導入される」と表現されます。</li>
 </ul></section>
             
           </div>
@@ -1447,7 +1447,49 @@ Rubyでは、制御構文(if, for, while, etc..)内で宣言した変数をそ�
             </aside>
             
             <aside class="page_number">
-              5/22
+              5/32
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 03_more_rubylike.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>演習A</h2></header>
+            
+            
+            <section><h2>Exercise A-1</h2>
+<p>メソッドを定義してみましょう。
+与えられた数を２倍して５を足した数を返すメソッドcalcを定義してみてください。</p>
+<div class="highlight"><pre><span class="n">calc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># =&gt; 9</span>
+<span class="n">calc</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># =&gt; 15</span>
+</pre></div>
+
+<h2>Excercise A-2</h2>
+<p>if文を使って出力する文字列を変えてみましょう。
+整数を入力するコードを以下に示します。</p>
+<div class="highlight"><pre><span class="nb">gets</span><span class="o">.</span><span class="n">to_i</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="03_more_rubylike.md">03_more_rubylike.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/32
             </aside>
           </footer>
         </div>
@@ -1475,7 +1517,7 @@ Rubyでは、制御構文(if, for, while, etc..)内で宣言した変数をそ�
             </aside>
             
             <aside class="page_number">
-              6/22
+              7/32
             </aside>
           </footer>
         </div>
@@ -1508,7 +1550,7 @@ Rubyでは、制御構文(if, for, while, etc..)内で宣言した変数をそ�
 <h2>Tips</h2>
 <ul>
 <li>シングルクォートの場合は使えません。</li>
-<li>"式"なので、関数呼び出しでもなんでもありです。</li>
+<li>"式"なので、メソッド呼び出しでもなんでもありです。</li>
 </ul></section>
             
           </div>
@@ -1525,7 +1567,7 @@ Rubyでは、制御構文(if, for, while, etc..)内で宣言した変数をそ�
             </aside>
             
             <aside class="page_number">
-              7/22
+              8/32
             </aside>
           </footer>
         </div>
@@ -1573,7 +1615,7 @@ Rubyでは、制御構文(if, for, while, etc..)内で宣言した変数をそ�
             </aside>
             
             <aside class="page_number">
-              8/22
+              9/32
             </aside>
           </footer>
         </div>
@@ -1602,6 +1644,7 @@ Rubyでは、制御構文(if, for, while, etc..)内で宣言した変数をそ�
 <ul>
 <li>":文字列"というリテラルは、「シンボル」と呼ばれるものです。
    変更不可能(immutable)な文字列リテラル、と考えてください。</li>
+<li>通常キーにはシンボルを用いますが、通常の文字列でもOKです。</li>
 <li>定義されていないキーの値を取得しようとした場合はnilが返ってきます。(デフォルトの挙動)</li>
 </ul></section>
             
@@ -1619,7 +1662,56 @@ Rubyでは、制御構文(if, for, while, etc..)内で宣言した変数をそ�
             </aside>
             
             <aside class="page_number">
-              9/22
+              10/32
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 03_more_rubylike.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>演習B</h2></header>
+            
+            
+            <section><h2>Excercise B-1</h2>
+<p>式展開を用いて自己紹介をしましょう。以下のフォーマットを用いて下さい。</p>
+<div class="highlight"><pre>こんにちは、私は〜です。私は〜歳です。 〜から来ました。
+</pre></div>
+
+<h2>Excercise B-2</h2>
+<p>ヒアドキュメントを用いて自己紹介をしましょう。以下のフォーマットを用いて下さい。</p>
+<div class="highlight"><pre>こんにちは、私は〜です。
+私は〜歳です。
+〜から来ました。
+</pre></div>
+
+<h2>Excercise B-3</h2>
+<p>ハッシュを用いて自己紹介をしましょう。自己紹介の為のデータはひとつの変数にまとめてください。
+以下のフォーマットを用いて下さい。</p>
+<div class="highlight"><pre> こんにちは、私は〜です。
+ 私は〜歳です。
+ 〜から来ました。
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="03_more_rubylike.md">03_more_rubylike.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/32
             </aside>
           </footer>
         </div>
@@ -1647,7 +1739,7 @@ Rubyでは、制御構文(if, for, while, etc..)内で宣言した変数をそ�
             </aside>
             
             <aside class="page_number">
-              10/22
+              12/32
             </aside>
           </footer>
         </div>
@@ -1699,7 +1791,7 @@ Rubyでは、制御構文(if, for, while, etc..)内で宣言した変数をそ�
             </aside>
             
             <aside class="page_number">
-              11/22
+              13/32
             </aside>
           </footer>
         </div>
@@ -1725,7 +1817,7 @@ Rubyでは、制御構文(if, for, while, etc..)内で宣言した変数をそ�
 
 <h2>Tips</h2>
 <ul>
-<li>関数への引数の渡し方には、多重代入とほとんど同じルールが適用されます。</li>
+<li>メソッドへの引数の渡し方には、多重代入とほとんど同じルールが適用されます。</li>
 <li>配列の展開という用語は、私が勝手に使っているだけです。</li>
 </ul></section>
             
@@ -1743,7 +1835,7 @@ Rubyでは、制御構文(if, for, while, etc..)内で宣言した変数をそ�
             </aside>
             
             <aside class="page_number">
-              12/22
+              14/32
             </aside>
           </footer>
         </div>
@@ -1786,7 +1878,58 @@ Rubyでは、制御構文(if, for, while, etc..)内で宣言した変数をそ�
             </aside>
             
             <aside class="page_number">
-              13/22
+              15/32
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 03_more_rubylike.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>演習C</h2></header>
+            
+            
+            <section><h2>Excercise C-1</h2>
+<p>多重代入を用いて、次の計算を成立させてください。
+"数字の配列"には任意の数字を要素とする配列を、"変数列"には多重代入を行う変数x,y,zを記述してください。</p>
+<div class="highlight"><pre><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="err">数字の配列</span>
+<span class="err">変数列</span> <span class="o">=</span> <span class="o">[</span><span class="n">a</span><span class="p">,</span> <span class="o">[</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="o">]</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="n">z</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">]</span>
+
+<span class="nb">puts</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span>
+</pre></div>
+
+<h2>Excercise C-2</h2>
+<p>配列の展開を用いて、任意の数の引数を受け取りそれらの合計を返すメソッドsumを定義してみましょう。</p>
+<div class="highlight"><pre><span class="n">sum</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span> <span class="c1"># =&gt; 13</span>
+<span class="n">sum</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># =&gt; 24</span>
+</pre></div>
+
+<h2>Excercise C-3</h2>
+<p>ハッシュの畳み込みを用いて、自己紹介をするメソッドself_introduceを定義してみましょう。</p>
+<div class="highlight"><pre>私の名前は〜です。
+私は〜歳です。
+〜から来ました。
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="03_more_rubylike.md">03_more_rubylike.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/32
             </aside>
           </footer>
         </div>
@@ -1814,7 +1957,7 @@ Rubyでは、制御構文(if, for, while, etc..)内で宣言した変数をそ�
             </aside>
             
             <aside class="page_number">
-              14/22
+              17/32
             </aside>
           </footer>
         </div>
@@ -1858,7 +2001,7 @@ untilは、条件式が偽であるときにループを継続します。</p>
             </aside>
             
             <aside class="page_number">
-              15/22
+              18/32
             </aside>
           </footer>
         </div>
@@ -1881,7 +2024,10 @@ untilは、条件式が偽であるときにループを継続します。</p>
 <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="nb">puts</span> <span class="n">i</span> <span class="k">unless</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span> <span class="k">until</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">5</span>
 </pre></div>
-</section>
+
+<ul>
+<li>修飾子にelseを指定することはできません。</li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -1897,7 +2043,7 @@ untilは、条件式が偽であるときにループを継続します。</p>
             </aside>
             
             <aside class="page_number">
-              16/22
+              19/32
             </aside>
           </footer>
         </div>
@@ -1921,9 +2067,9 @@ forやwhileによる順次アクセスを更に抽象化したものと考えら
   <span class="n">element</span><span class="o">.</span><span class="n">capitalize</span>
 <span class="k">end</span>
 
-<span class="n">array</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">element</span><span class="o">|</span>
+<span class="n">array</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">element</span><span class="o">|</span>
   <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">element</span><span class="si">}</span><span class="s2"> is cool!&quot;</span>
-<span class="k">end</span>
+<span class="p">}</span>
 </pre></div>
 
 <h2>Tips</h2>
@@ -1946,7 +2092,81 @@ forやwhileによる順次アクセスを更に抽象化したものと考えら
             </aside>
             
             <aside class="page_number">
-              17/22
+              20/32
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 03_more_rubylike.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>演習D</h2></header>
+            
+            
+            <section><h2>Excercise D-1</h2>
+<p>unlessとuntilを用いて１から１００までの"3の倍数でない数の和"を求めてみましょう。</p>
+<div class="highlight"><pre><span class="n">answer</span> <span class="o">=</span> <span class="mi">3367</span>
+</pre></div>
+
+<h2>Excercise D-2 *</h2>
+<p>Excercise D-1で書いたコードを修飾子を用いて書きなおしてみましょう。
+untilを修飾子にするのは少し難しいかもしれません。</p>
+<div class="highlight"><pre><span class="n">answer</span> <span class="o">=</span> <span class="mi">3367</span>
+</pre></div>
+
+<h2>Excercise D-3</h2>
+<p>Excercise D-1で書いたコードをイテレータを用いて書きなおしてみましょう。
+if, unlessのどちらを用いてもよいです。</p>
+<div class="highlight"><pre><span class="n">answer</span> <span class="o">=</span> <span class="mi">3367</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="03_more_rubylike.md">03_more_rubylike.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              21/32
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 03_more_rubylike.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>ブロック</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="03_more_rubylike.md">03_more_rubylike.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              22/32
             </aside>
           </footer>
         </div>
@@ -1976,13 +2196,12 @@ forやwhileによる順次アクセスを更に抽象化したものと考えら
   <span class="nb">puts</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
 <span class="k">end</span>
 
-<span class="n">bar</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">|</span>
-  <span class="nb">puts</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-<span class="p">}</span>
+<span class="n">bar</span> <span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="p">}</span>
 </pre></div>
 
 <h2>Tips</h2>
 <ul>
+<li>ブロックは値を返すことができます。その場合returnではなくnextキーワードを用います。</li>
 <li>ブロックでは、新しいスコープが導入されます。また、外側の変数を参照することができます。</li>
 </ul></section>
             
@@ -2000,7 +2219,7 @@ forやwhileによる順次アクセスを更に抽象化したものと考えら
             </aside>
             
             <aside class="page_number">
-              18/22
+              23/32
             </aside>
           </footer>
         </div>
@@ -2015,23 +2234,25 @@ forやwhileによる順次アクセスを更に抽象化したものと考えら
             
             
             <section><h2>Description</h2>
-<p>Rubyでは、前述のブロックをデータとして扱うことができます。これを手続きオブジェクトといいます。</p>
+<p>Rubyでは、前述のブロックをデータとして扱うことができます。これを手続きオブジェクトといいます。
+lambda{|引数|} , proc{}, Proc.new do ... end, などの記法があり、ブロック.call(引数)で呼び出すことができます。</p>
 <h2>Example</h2>
 <div class="highlight"><pre><span class="n">var</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">|</span>
   <span class="nb">puts</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
 <span class="p">}</span>
-
 <span class="n">var</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
 <span class="n">var</span> <span class="o">=</span> <span class="nb">proc</span> <span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">|</span>
   <span class="nb">puts</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
 <span class="p">}</span>
-
 <span class="n">var</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="nb">lambda</span><span class="p">{</span> <span class="nb">puts</span> <span class="s1">&#39;hello&#39;</span> <span class="p">}</span><span class="o">.</span><span class="n">call</span>
 </pre></div>
 
 <h2>Tips</h2>
 <ul>
+<li>引数の定義は省略することができます。</li>
 <li><a href="http://doc.okkez.net/static/192/doc/spec=2flambda_proc.html#lambda_proc">lambda と proc と Proc.new とイテレータの違い</a></li>
 </ul></section>
             
@@ -2049,7 +2270,53 @@ forやwhileによる順次アクセスを更に抽象化したものと考えら
             </aside>
             
             <aside class="page_number">
-              19/22
+              24/32
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 03_more_rubylike.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>演習E</h2></header>
+            
+            
+            <section><h2>Excercise E-1 *</h2>
+<p>ブロックの戻り値をputsで出力するブロック付きメソッドoutputを定義してみましょう。
+また、ブロックでは自身の外側で宣言された変数にもアクセスすることができます。
+これを用いて、外側の変数をブロック付きメソッドに渡して出力してみましょう。</p>
+<div class="highlight"><pre><span class="n">output</span> <span class="k">do</span>
+  <span class="s2">&quot;hello!&quot;</span>
+<span class="k">end</span>
+<span class="c1"># =&gt; hello!</span>
+</pre></div>
+
+<h2>Excercise E-2 *</h2>
+<p>手続きオブジェクトはデータです。変数に入れることや、メソッドの引数や戻り値にすることができます。
+"hello!と出力する手続きオブジェクト"を返すメソッドhello_procを定義してみましょう。</p>
+<div class="highlight"><pre><span class="n">hello_proc</span><span class="o">.</span><span class="n">call</span>
+<span class="c1"># =&gt; hello!</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="03_more_rubylike.md">03_more_rubylike.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              25/32
             </aside>
           </footer>
         </div>
@@ -2060,7 +2327,7 @@ forやwhileによる順次アクセスを更に抽象化したものと考えら
         <div class="slide">
           <div class="inner">
             
-            <header><h1>オブジェクト</h1></header>
+            <header><h1>応用問題</h1></header>
             
             
           </div>
@@ -2077,7 +2344,147 @@ forやwhileによる順次アクセスを更に抽象化したものと考えら
             </aside>
             
             <aside class="page_number">
-              20/22
+              26/32
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 03_more_rubylike.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code has_notes">
+          <div class="inner">
+            
+            <header><h2>A. イテレータを作ってみよう</h2></header>
+            
+            
+            <section><p>yieldを用いるとオリジナルのイテレータを実装することができます。
+配列を受け取り、インデックスが偶数の要素に対して繰り返しを行うようなイテレータeach_evenを作ってみましょう。</p>
+<h2>Code</h2>
+<div class="highlight"><pre><span class="n">each_even</span><span class="p">(</span><span class="o">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="o">]</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">e</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">e</span>
+<span class="k">end</span>
+<span class="c1"># =&gt; 8</span>
+<span class="c1">#    4</span>
+</pre></div>
+
+<h2>Hint</h2>
+<p>キーボードの 2 を押すと表示されます。</p>
+<p class="notes">頑張る君を応援します！</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="03_more_rubylike.md">03_more_rubylike.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              27/32
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 03_more_rubylike.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code has_notes">
+          <div class="inner">
+            
+            <header><h2>B. switch文なんて要らない！</h2></header>
+            
+            
+            <section><p>ハッシュテーブルと手続きオブジェクトを用いると、switch文のような分岐を行うことができます。
+次のプログラムをcase, whenを用いずに書きなおして下さい。</p>
+<h2>Code</h2>
+<div class="highlight"><pre><span class="n">str</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span>
+
+<span class="k">case</span> <span class="n">str</span>
+<span class="k">when</span> <span class="s2">&quot;hello&quot;</span>
+  <span class="nb">puts</span> <span class="s2">&quot;(0-0)/ Hi!&quot;</span>
+<span class="k">when</span> <span class="s2">&quot;bye&quot;</span>
+  <span class="nb">puts</span> <span class="s1">&#39;(T-T)/ Bye..&#39;</span>
+<span class="k">when</span> <span class="s2">&quot;owata&quot;</span>
+  <span class="nb">puts</span> <span class="s1">&#39;\(^o^)/&#39;</span>
+<span class="k">end</span>
+</pre></div>
+
+<h2>Hint</h2>
+<p>キーボードの 2 を押すと表示されます。</p>
+<p class="notes">ハッシュに手続きオブジェクトを格納します。</p>
+<p class="notes">ハッシュのキーは文字列を設定できるので・・・</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="03_more_rubylike.md">03_more_rubylike.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              28/32
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 03_more_rubylike.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>C. 数当てゲーム</h2></header>
+            
+            
+            <section><p>次の仕様の「数当てゲーム」を作成して下さい。</p>
+<h2>仕様</h2>
+<ul>
+<li>乱数を用いて0〜100の数を生成します。</li>
+<li>ユーザーに数字を入力してもらい、生成した数より大きければ"High"小さければ"Low"と出力します。</li>
+<li>等しければ"Hit"と表示してプログラムを終了します。</li>
+</ul>
+<h2>必要なコード</h2>
+<div class="highlight"><pre><span class="nb">rand</span>      <span class="c1"># 0〜1の乱数を生成する</span>
+<span class="nb">gets</span><span class="o">.</span><span class="n">to_i</span> <span class="c1"># ユーザーの入力を整数として受け取る</span>
+</pre></div>
+
+<h2>実行サンプル</h2>
+<div class="highlight"><pre>&gt; 50
+High
+&gt; 25
+Low
+&gt; 32
+Hit!
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="03_more_rubylike.md">03_more_rubylike.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              29/32
             </aside>
           </footer>
         </div>
@@ -2088,7 +2495,7 @@ forやwhileによる順次アクセスを更に抽象化したものと考えら
         <div class="slide">
           <div class="inner">
             
-            <header><h1>例外</h1></header>
+            <header><h1>今週はここまでです。</h1></header>
             
             
           </div>
@@ -2105,7 +2512,7 @@ forやwhileによる順次アクセスを更に抽象化したものと考えら
             </aside>
             
             <aside class="page_number">
-              21/22
+              30/32
             </aside>
           </footer>
         </div>
@@ -2116,7 +2523,46 @@ forやwhileによる順次アクセスを更に抽象化したものと考えら
         <div class="slide">
           <div class="inner">
             
-            <header><h1>正規表現</h1></header>
+            <header><h1>次回は...!</h1></header>
+            
+            
+            <section><h2>オブジェクト</h2>
+<h2>例外</h2>
+<h2>正規表現</h2>
+<h2>シンボル</h2>
+<h2>ファイル分割</h2>
+<h2>sprintf式</h2>
+<h2>配列の便利な扱い方</h2>
+<h2>すべての式は値を返す</h2>
+<h2>メソッドチェイン</h2>
+<p>(順不同)</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="03_more_rubylike.md">03_more_rubylike.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              31/32
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 03_more_rubylike.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>お疲れ様でした！</h1></header>
             
             
           </div>
@@ -2133,29 +2579,7 @@ forやwhileによる順次アクセスを更に抽象化したものと考えら
             </aside>
             
             <aside class="page_number">
-              22/22
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source:  -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="page_number">
-              /22
+              32/32
             </aside>
           </footer>
         </div>
@@ -2197,102 +2621,158 @@ forやwhileによる順次アクセスを更に抽象化したものと考えら
           <td><a href="#slide5">5</a></td>
         </tr>
         
+        <tr id="toc-row-6" class="sub">
+          <th><a href="#slide6">演習A</a></th>
+          <td><a href="#slide6">6</a></td>
+        </tr>
+        
       
       
-      <tr id="toc-row-6">
-        <th><a href="#slide6">リテラル</a></th>
-        <td><a href="#slide6">6</a></td>
+      <tr id="toc-row-7">
+        <th><a href="#slide7">リテラル</a></th>
+        <td><a href="#slide7">7</a></td>
       </tr>
       
         
-        <tr id="toc-row-7" class="sub">
-          <th><a href="#slide7">式展開*</a></th>
-          <td><a href="#slide7">7</a></td>
-        </tr>
-        
         <tr id="toc-row-8" class="sub">
-          <th><a href="#slide8">ヒアドキュメント</a></th>
+          <th><a href="#slide8">式展開*</a></th>
           <td><a href="#slide8">8</a></td>
         </tr>
         
         <tr id="toc-row-9" class="sub">
-          <th><a href="#slide9">ハッシュテーブル*</a></th>
+          <th><a href="#slide9">ヒアドキュメント</a></th>
           <td><a href="#slide9">9</a></td>
         </tr>
         
-      
-      
-      <tr id="toc-row-10">
-        <th><a href="#slide10">代入と引数</a></th>
-        <td><a href="#slide10">10</a></td>
-      </tr>
-      
+        <tr id="toc-row-10" class="sub">
+          <th><a href="#slide10">ハッシュテーブル*</a></th>
+          <td><a href="#slide10">10</a></td>
+        </tr>
         
         <tr id="toc-row-11" class="sub">
-          <th><a href="#slide11">多重代入*</a></th>
+          <th><a href="#slide11">演習B</a></th>
           <td><a href="#slide11">11</a></td>
         </tr>
         
-        <tr id="toc-row-12" class="sub">
-          <th><a href="#slide12">配列の展開</a></th>
-          <td><a href="#slide12">12</a></td>
-        </tr>
-        
-        <tr id="toc-row-13" class="sub">
-          <th><a href="#slide13">ハッシュの畳み込み</a></th>
-          <td><a href="#slide13">13</a></td>
-        </tr>
-        
       
       
-      <tr id="toc-row-14">
-        <th><a href="#slide14">制御構造</a></th>
-        <td><a href="#slide14">14</a></td>
+      <tr id="toc-row-12">
+        <th><a href="#slide12">代入と引数</a></th>
+        <td><a href="#slide12">12</a></td>
       </tr>
       
         
+        <tr id="toc-row-13" class="sub">
+          <th><a href="#slide13">多重代入*</a></th>
+          <td><a href="#slide13">13</a></td>
+        </tr>
+        
+        <tr id="toc-row-14" class="sub">
+          <th><a href="#slide14">配列の展開</a></th>
+          <td><a href="#slide14">14</a></td>
+        </tr>
+        
         <tr id="toc-row-15" class="sub">
-          <th><a href="#slide15">unlessとuntil*</a></th>
+          <th><a href="#slide15">ハッシュの畳み込み</a></th>
           <td><a href="#slide15">15</a></td>
         </tr>
         
         <tr id="toc-row-16" class="sub">
-          <th><a href="#slide16">修飾子*</a></th>
+          <th><a href="#slide16">演習C</a></th>
           <td><a href="#slide16">16</a></td>
         </tr>
         
-        <tr id="toc-row-17" class="sub">
-          <th><a href="#slide17">イテレータ*</a></th>
-          <td><a href="#slide17">17</a></td>
-        </tr>
+      
+      
+      <tr id="toc-row-17">
+        <th><a href="#slide17">制御構造</a></th>
+        <td><a href="#slide17">17</a></td>
+      </tr>
+      
         
         <tr id="toc-row-18" class="sub">
-          <th><a href="#slide18">ブロック付きメソッド</a></th>
+          <th><a href="#slide18">unlessとuntil*</a></th>
           <td><a href="#slide18">18</a></td>
         </tr>
         
         <tr id="toc-row-19" class="sub">
-          <th><a href="#slide19">手続きオブジェクト</a></th>
+          <th><a href="#slide19">修飾子*</a></th>
           <td><a href="#slide19">19</a></td>
+        </tr>
+        
+        <tr id="toc-row-20" class="sub">
+          <th><a href="#slide20">イテレータ*</a></th>
+          <td><a href="#slide20">20</a></td>
+        </tr>
+        
+        <tr id="toc-row-21" class="sub">
+          <th><a href="#slide21">演習D</a></th>
+          <td><a href="#slide21">21</a></td>
         </tr>
         
       
       
-      <tr id="toc-row-20">
-        <th><a href="#slide20">オブジェクト</a></th>
-        <td><a href="#slide20">20</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-21">
-        <th><a href="#slide21">例外</a></th>
-        <td><a href="#slide21">21</a></td>
-      </tr>
-      
-      
       <tr id="toc-row-22">
-        <th><a href="#slide22">正規表現</a></th>
+        <th><a href="#slide22">ブロック</a></th>
         <td><a href="#slide22">22</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-23" class="sub">
+          <th><a href="#slide23">ブロック付きメソッド</a></th>
+          <td><a href="#slide23">23</a></td>
+        </tr>
+        
+        <tr id="toc-row-24" class="sub">
+          <th><a href="#slide24">手続きオブジェクト</a></th>
+          <td><a href="#slide24">24</a></td>
+        </tr>
+        
+        <tr id="toc-row-25" class="sub">
+          <th><a href="#slide25">演習E</a></th>
+          <td><a href="#slide25">25</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-26">
+        <th><a href="#slide26">応用問題</a></th>
+        <td><a href="#slide26">26</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-27" class="sub">
+          <th><a href="#slide27">A. イテレータを作ってみよう</a></th>
+          <td><a href="#slide27">27</a></td>
+        </tr>
+        
+        <tr id="toc-row-28" class="sub">
+          <th><a href="#slide28">B. switch文なんて要らない！</a></th>
+          <td><a href="#slide28">28</a></td>
+        </tr>
+        
+        <tr id="toc-row-29" class="sub">
+          <th><a href="#slide29">C. 数当てゲーム</a></th>
+          <td><a href="#slide29">29</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-30">
+        <th><a href="#slide30">今週はここまでです。</a></th>
+        <td><a href="#slide30">30</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-31">
+        <th><a href="#slide31">次回は...!</a></th>
+        <td><a href="#slide31">31</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-32">
+        <th><a href="#slide32">お疲れ様でした！</a></th>
+        <td><a href="#slide32">32</a></td>
       </tr>
       
       
